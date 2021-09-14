@@ -1,4 +1,4 @@
-int size = 500;
+int screenSize = 500;
 
 public void setup() {
   size(500, 500);
@@ -13,11 +13,11 @@ public void draw() {
   int recLength = 60;
   int recHeight = 70;
   int currentX = resetValueX;
-  int currentY = size-recHeight;
+  int currentY = screenSize-recHeight;
   boolean offset = true;
   while(currentY > -1*recHeight) {
     if (offset) currentX += (recLength/2);
-    while(currentX < size) {
+    while(currentX < screenSize) {
       scale(currentX, currentY, offset, recHeight, recLength);
       currentX += recLength;
     }
